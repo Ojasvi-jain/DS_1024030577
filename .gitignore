@@ -1,0 +1,8 @@
+# Ignore compiled binaries
+*.exe
+*.out
+*.o
+*.obj
+
+# Ignore VS Code settings (optional if you don't want to share them)
+.vscode/
