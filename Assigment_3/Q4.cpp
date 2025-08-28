@@ -45,7 +45,6 @@ public:
     bool isFull() { return top == MAX - 1; }
 };
 
-// function to check precedence
 int precedence(char op)
 {
     if (op == '^')
@@ -63,13 +62,11 @@ bool isRightAssociative(char op)
     return (op == '^'); // ^ is right associative
 }
 
-// function to check if character is operator
 bool isOperator(char c)
 {
     return (c == '+' || c == '-' || c == '*' || c == '/' || c == '^');
 }
 
-// function to convert infix to postfix
 string infixToPostfix(string infix)
 {
     Stack s;
@@ -77,7 +74,7 @@ string infixToPostfix(string infix)
 
     for (char c : infix)
     {
-        if (isalnum(c))
+        if (!isOperator(c))
         {
             // if operand, add to postfix
             postfix += c;

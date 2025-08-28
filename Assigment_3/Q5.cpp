@@ -37,7 +37,6 @@ public:
     bool isFull() { return top == MAX - 1; }
 };
 
-// Function to evaluate postfix expression
 int evaluatePostfix(string expr)
 {
     Stack s;
@@ -46,12 +45,10 @@ int evaluatePostfix(string expr)
     {
         if (isdigit(c))
         {
-            // convert char digit to int and push
             s.push(c - '0');
         }
         else
         {
-            // operator: pop two operands
             int val2 = s.pop();
             int val1 = s.pop();
 
